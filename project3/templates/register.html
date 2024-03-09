@@ -1,0 +1,50 @@
+{%extends "base.html"%}
+{%block body%}
+<head>
+<title>Registeration</title>
+<style>
+    form{
+        border: 2px solid black;
+        color:red;
+        background-color: lightgreen;
+        margin-top: 25px;
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .btn{
+        background-color: red;
+        color: white;
+
+    }
+    h1{
+        color:rgb(6, 77, 6);
+    }
+</style>
+</head>
+<center>
+    <h1><u>Registeration Form</u></h1>
+    <form action="register", method="post">
+        {% csrf_token%}
+        <label for="sn">Student_Name</label>
+        <input type="text" name="sn" placeholder="Enter Your Name">
+        <hr>
+        <label for="br">Branch</label>
+        <input type="br" name="br" placeholder="Enter Your Branch">
+    
+        <hr>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Your Email">
+
+        <hr>
+        <label for="sm">Semester</label>
+        <input type="text" name="sem" placeholder="Enter Your Semester">
+        <hr>
+        <input class="btn" type="submit" value="Register">
+    
+    </form>
+</center>
+
+{%endblock body%}

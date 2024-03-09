@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%block body%}
+<center>
+    <form method="post">
+        {% csrf_token%}
+        <label for="sn">Student_Name</label>
+        <input type="text" name="sn" placeholder="Enter Your Name">
+        <hr>
+    
+        <hr>
+        <label for="email">Password</label>
+        <input type="email" name="email" placeholder="Enter Your Email as password">
+
+
+        <hr>
+        <input class="btn" type="submit" value="Register">
+    
+    </form>
+</center>
+
+{%endblock body%}

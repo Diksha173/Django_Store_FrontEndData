@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+{%block body%}
+<h1>Helloooo </h1>
+{%if user.studentName|length%}
+<h2>hello {{user.studentName}}</h2>
+<h2>Your branch is {{user.studentBranch}}</h2>
+<h2>Your eamil is {{user.studentEmail}}</h2>
+{%else%}
+<a href="login"><h2>Please Login</h2></a>
+{%endif%}
+
+
+
+
+{%endblock body%}

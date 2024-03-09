@@ -1,0 +1,49 @@
+{%extends "baset.html"%}
+{%block bodyt%}
+<head>
+<title>Teacher</title>
+<style>
+    form{
+        border: 2px solid black;
+        color:red;
+        background-color: lightgreen;
+        margin-top: 25px;
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .btn{
+        background-color: red;
+        color: white;
+
+    }
+    h1{
+        color:rgb(6, 77, 6);
+    
+    }
+    
+</style>
+</head>
+<center>
+    <h1><u>Teacher Details</u></h1>
+    <form action="teacher", method="post">
+        {% csrf_token%}
+        <label for="tn">Teacher_Name</label>
+        <input type="text" name="tn" placeholder="Enter Your Name">
+        <hr>
+        <label for="sub">Subject</label>
+        <input type="text" name="sub" placeholder="Enter Subject">
+    
+        <hr>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Your Email">
+
+        <hr>
+        <input class="btn" type="submit" value="Save">
+    
+    </form>
+</center>
+
+{%endblock bodyt%}
